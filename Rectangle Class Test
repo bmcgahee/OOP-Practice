@@ -1,0 +1,20 @@
+  //Testing the Rectangle class.
+  public static void main(String[] args) {
+      Rectangle rect = new Rectangle();
+        
+      String rectName = rect.getName("Bob"); //Rectangle's name is Bob and his color is red.
+      String rectColor = rect.getColor("red");
+        
+      int length = rect.getLength(25); //Rectangle has a length of 25 and a width of 14.
+      int width = rect.getWidth(14); 
+        
+      int perimeter = rect.getPerimeter(length, width);
+      int area = rect.getArea(length, width);
+      double diagonal = rect.getDiagonal(length, width);
+        
+      System.out.println("Hello, my name is " + rectName + ".");
+      System.out.println("My color is " + rectColor + ".");
+      System.out.println("I have a perimeter of " + perimeter + ".");
+      System.out.println("My area is " + area + ".");
+      System.out.println("My diagonal length is " + diagonal + ".");
+    }
