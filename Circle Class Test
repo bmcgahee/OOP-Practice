@@ -1,0 +1,37 @@
+ //Testing the Circle class.
+   public static void main(String[] args) {
+        Circle circle = new Circle();
+        
+        String circleName = circle.getName("Larry"); //Circle's name is Larry and his color is blue.
+        String circleColor = circle.getColor("blue");
+        
+        int radius = circle.getRadius(5); //Larry's radius is 5.
+        double circumference = circle.getCircumference(radius);
+        double area = circle.getArea(radius);
+        
+        int xCenter = circle.getXCenter(2); //Larry has a center of (2, -1).
+        int yCenter = circle.getYCenter(-1);
+        String centerPoint = circle.getCenterPoint(xCenter, yCenter);
+        
+        int xCoordinate = circle.getXCoordinate(1);
+        int yCoordinate = circle.getYCoordinate(4);
+        String testPoint = circle.getTestPoint(xCoordinate, yCoordinate); //Test point is (1, 4).
+        
+        double distance = circle.getDistance(xCenter, yCenter, xCoordinate, yCoordinate);
+        boolean onCircle = circle.onCircle(distance, radius);
+        boolean insideCircle = circle.insideCircle(distance, radius);
+        
+        System.out.println("Hello, my name is " + circleName + ".");
+        System.out.println("My color is " + circleColor + ".");
+        System.out.println("My center is " + centerPoint + ".");
+        System.out.println("My radius is " + radius + ".");
+        System.out.println("I have a circumference of " + circumference + ".");
+        System.out.println("My area is " + area + ".");
+        
+        if(onCircle)                                                          
+            System.out.println("The test point " + testPoint + " lies on me.");  //Case where (1, 4) is located on Larry the circle.
+        else if(insideCircle) 
+            System.out.println("The test point " + testPoint + " lies within me.");  //Case where (1, 4) is located within Larry the circle.
+        else  
+            System.out.println("The test point " + testPoint + " lies outside of me."); //Case where (1, 4) is located outside Larry the circle.
+    }
